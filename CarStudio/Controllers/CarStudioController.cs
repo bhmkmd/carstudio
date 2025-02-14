@@ -23,5 +23,13 @@ namespace CarStudio.Controllers
             var cars = _carService.GetAllCars();
             return Ok(cars);
         }
+
+        [HttpGet]
+        [Route("cars/{id}")]
+        public IActionResult GetCar(int id)
+        {
+            var car = new Car() { Id = id, Company = "Toyota", ModelName = "Yaris", Price = 800000 };
+            return Ok(car);
+        }
     }
 }
