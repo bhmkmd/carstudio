@@ -2,4 +2,62 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/CarStudio/bin/Debug/net8.0
+
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+
+# Logs and database
+logs/
+*.log
+*.tlog
+*.pdb
+
+# Package management
+node_modules/
+packages/
+*.nupkg
+project.lock.json
+
+# Resharper and Rider
+*.DotSettings.user
+.idea/
+
+# Mac and Linux
+.DS_Store
+*.swp
+
+# VS Code settings
+.vscode/
+
+# Rider settings
+*.sln.iml
+
+# ASP.NET Core secrets
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Entity Framework Migrations
+Migrations/
+
+# Docker
+*.dockerignore
+
+# Publish artifacts
+publish/
+out/
+
+# Coverage results
+coverage/
+*.coverage
+*.coveragexml
+
+# Generated files
+Generated/
+ServiceFabricBackup/
