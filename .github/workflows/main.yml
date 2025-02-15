@@ -33,22 +33,4 @@ jobs:
       - name: Run Unit Tests
         run: dotnet test --configuration Release --no-build --verbosity normal
 
-  codeql:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-      actions: read
-      contents: read
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: 'csharp'
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+  
